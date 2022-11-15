@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Timis_Adina_Lab2.Data;
 
@@ -11,9 +12,10 @@ using Timis_Adina_Lab2.Data;
 namespace Timis_Adina_Lab2.Migrations
 {
     [DbContext(typeof(Timis_Adina_Lab2Context))]
-    partial class Timis_Adina_Lab2ContextModelSnapshot : ModelSnapshot
+    [Migration("20221115135254_Text")]
+    partial class Text
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
