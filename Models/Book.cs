@@ -9,6 +9,7 @@ namespace Timis_Adina_Lab2.Models
     public class Book
     {
         public int ID { get; set; }
+        [StringLength(150, MinimumLength = 3)]
         public string Title { get; set; }
         [Display(Name = "Book Title")]
         
