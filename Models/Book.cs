@@ -9,9 +9,11 @@ namespace Timis_Adina_Lab2.Models
     public class Book
     {
         public int ID { get; set; }
-        [StringLength(150, MinimumLength = 3)]
-        public string Title { get; set; }
         [Display(Name = "Book Title")]
+        [RegularExpression(@"^[A-Z]+[a-z\s]*$")]
+        [StringLength(150, MinimumLength = 3)]
+        [Required]
+        public string Title { get; set; }
         
         [Column(TypeName = "decimal(6, 2)")]
         [Range(0.01, 500)]
