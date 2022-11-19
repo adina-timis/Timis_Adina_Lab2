@@ -10,7 +10,7 @@ namespace Timis_Adina_Lab2.Models
     {
         public int ID { get; set; }
         [Display(Name = "Book Title")]
-        [RegularExpression(@"^[A-Z]+[a-z\s]*$")]
+        [RegularExpression(@"^[A-Z]+[a-z\s]*$", ErrorMessage = "Numele cartii trebuie sa fie format din cel putin 3 litere!")]
         [StringLength(150, MinimumLength = 3)]
         [Required]
         public string Title { get; set; }
